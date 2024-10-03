@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            flex-direction: column; /* Stack elements vertically */
+            background-image: url('Dark Wallpaper Portrait - Live Wallpaper HD.jpg'); /* Add your background image */
+            background-size: cover; /* Ensure it covers the entire area */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent repeating */
+        }
+        h2 {
+            color: yellow;
+            text-align: center;
+            font-size: 4.5em; /* Bigger size than h1 */
+            text-shadow: 0 0 20px rgba(255, 255, 0, 0.8); /* Inner glow effect */
+            margin-bottom: 20px; /* Space below the title */
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-size: 3.8em; /* Adjust size as needed */
+            text-shadow: 0 0 10px rgba(33, 218, 235, 0.8); /* Glowing effect */
+            margin-top: 15px; /* Space below the title */
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px; /* Adjust width as needed */
+        }
+        div {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select {
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+   <h2>Market Is On A Huge Rush</h2>
+   <h1>Grab Your Offer Asap</h1>
+   <form>
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Name" required>
+    </div>
+    <div>
+        <label for="account-number">Account Number:</label>
+        <input type="number" id="account-number" placeholder="Account Number" required>
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Email" required>
+    </div>
+    <div>
+        <label for="package">Preferable Package:</label>
+        <select name="package" id="package" required>
+            <option value="" disabled selected>Select a package</option>
+            <option value="Bronze">Bronze</option>
+            <option value="Gold">Gold</option>
+            <option value="Diamond">Diamond</option>
+            <option value="Silver">Silver</option>
+        </select>
+    </div>
+    <fieldset>
+        <legend>Agreement</legend>
+        <div>
+            <input type="radio" name="agreement" id="terms" required>
+            <label for="terms">I agree to the terms and conditions.</label>
+        </div>
+        <div>
+            <input type="radio" name="agreement" id="refund" required>
+            <label for="refund">I understand that money cannot be refunded.</label>
+        </div>
+    </fieldset>
+    <button type="submit">Submit</button>
+   </form>
+</body>
+</html>
+
+

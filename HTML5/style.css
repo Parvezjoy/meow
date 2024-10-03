@@ -1,0 +1,23 @@
+nav > ul > li{
+display: flex;
+display: inline;
+}
+li{
+    margin-right: 10px;
+    padding: 10px;
+}
+nav li a{
+    text-decoration: none;
+}
+nav li :hover{
+    background-color: hotpink;
+}
+/* nested mega menu styles  */
+nav ul.drop{
+    display:none ;
+    position: absolute;
+    background-color: bisque;
+}
+nav li:hover > .drop{
+display: block;
+}
