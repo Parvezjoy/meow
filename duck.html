@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lovely Duck</title>
+    <style>
+        body {
+           background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+        }
+
+        #duck {
+            width: 200px; /* Adjust size as needed */
+            transition: transform 0.5s;
+            position: absolute;
+            top: 25%; /* Position the duck above the buttons */
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        .poll {
+            margin-top: 200px; /* Adjust margin to ensure space for the duck */
+        }
+
+        .poll button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        .message {
+            color: black;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+        <img id="duck" src="kawaii_duck_png_by_milosii_df87clj.png" alt="Lovely Duck">
+        <div class="poll">
+            <h2>Do you love me?</h2>
+            <button onclick="respond('yes')">Yes</button>
+            <button onclick="respond('no')">No</button>
+        </div>
+        <audio id="jumpSound" src="cartoon-yay-140921.mp3"></audio>
+        <audio id="crySound" src="baby-crying-64996.mp3"></audio>
+        <div class="message" id="message"></div>
+    </div>
+
+    <script>
+        function respond(answer) {
+            const duck = document.getElementById('duck');
+            const jumpSound = document.getElementById('jumpSound');
+            const crySound = document.getElementById('crySound');
+            const message = document.getElementById('message');
+
+            // Reset message
+            message.textContent = '';
+
+            if (answer === 'yes') {
+                crySound.pause();
+                crySound.currentTime = 0; // Reset cry sound
+                jumpSound.play();
+                duck.style.transform = 'translateY(-50px)';
+                setTimeout(() => {
+                    duck.style.transform = 'translateY(0)';
+                }, 300);
+                message.textContent = 'Alabu Too Snehamon';
+            } else {
+                jumpSound.pause();
+                jumpSound.currentTime = 0; // Reset jump sound
+                crySound.play();
+                duck.style.transition = 'transform 0.5s linear'; // Set fast transition
+                duck.style.transform = 'translateX(100vw)'; // Move duck to the right
+                setTimeout(() => {
+                    duck.style.transform = 'translateX(-100vw)'; // Move duck back to the left
+                }, 500); // Duration to move
+                message.textContent = 'I\'m Sad';
+            }
+            message.style.color = 'violet';
+        }
+    </script>
+</body>
+</html>
